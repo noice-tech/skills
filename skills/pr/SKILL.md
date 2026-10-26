@@ -1,13 +1,13 @@
 ---
 name: pr
-description: Commit and push intended changes, and create or update a pull request using Noice product and release conventions. Explicit user invocation only.
-disable-model-invocation: true
+description: Commit and push intended changes, and create or update a pull request using Noice product and release conventions. Use when the user asks to commit, push, open a PR, or update a PR.
+disable-model-invocation: false
 license: MIT
 ---
 
 # PR
 
-Deliver the requested pull request using Git and GitHub CLI. An ordinary invocation includes committing and pushing the intended changes; honor narrower requests such as description-only or preview-only. Leave unrelated work alone. Choose the mechanics appropriate to the repository rather than treating this skill as a Git recipe.
+Deliver the requested pull request using Git and GitHub CLI. Match actions to the user's request. Loading this skill does not by itself authorize committing, pushing, or changing a PR. Honor narrower requests such as commit-only, description-only, or preview-only. Leave unrelated work alone. Choose the mechanics appropriate to the repository rather than treating this skill as a Git recipe.
 
 ## Naming expresses release intent
 
@@ -44,6 +44,6 @@ Public summaries should stand alone outside a potentially private repository: no
 
 Find the installed `show-me` skill through the agent's skill discovery mechanism and read its instructions. Use its visual explanation guidance for the PR description. Do not assume a filesystem location. If unavailable, ask the user to install it before proceeding.
 
-Explicit invocation of pr includes using show-me as supporting guidance, not independently activating it for unrelated tasks. For a PR, use GitHub-renderable Markdown rather than show-me's standalone HTML artifact option. Keep the Changelog contract above intact and state verification honestly.
+Using pr includes reading show-me as supporting guidance, not independently activating it for unrelated tasks. For a PR, use GitHub-renderable Markdown rather than show-me's standalone HTML artifact option. Keep the Changelog contract above intact and state verification honestly.
 
 The release-related skills consume the PR's public summary; do not invoke them automatically. Report the actual outcome, including partial failures, without implying that an unverified push or PR update succeeded.
