@@ -14,7 +14,7 @@ Choose your agent when prompted. If installing individual skills, install `show-
 
 ## Usage
 
-Invoke skills through your agent's skill commands. Agents can also select `pr` when you ask for commit, push, or pull request work. The other skills disable automatic selection on agents that support the included settings. Those settings do not restrict tool use or file access.
+Invoke skills through your agent's skill commands. Agents can also select `pr` for commit, push, or pull request work and `show-me` for visual explanations. The other skills disable automatic selection on agents that support the included settings. Those settings do not restrict tool use or file access.
 
 GitHub workflows require Git and an authenticated `gh`.
 
